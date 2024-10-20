@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge 10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .product-price {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .size-select, .purchase-btn {
+            margin-top: 10px;
+        }
+        .purchase-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .purchase-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .purchase-btn:hover:not(:disabled) {
+            background-color: #218838;
+        }
+        .product-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Product List</h2>
+    <ul id="productList" class="product-list">
+    </ul>
+
+    <h3>Add a New Product</h3>
+    <form id="productForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required>
+
+        <label for="productPrice">Price:</label>
+        <input type="number" id="productPrice" step="0.01" required>
+
+        <label for="productSize">Size (e.g., small, medium, large):</label>
+        <input type="text" id="productSize" required>
+
+        <label for="productStock">In Stock?</label>
+        <select id="productStock">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+
+        <button type="submit">Add Product</button>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
